@@ -4,16 +4,20 @@ import (
 	"context"
 	"fmt"
 	"go.etcd.io/etcd/clientv3"
+	"log"
 	"time"
 )
 
 func main() {
 	for true {
+		passwd := "root"
+		log.Println("passwd: ", passwd)
+
 		cli, err := clientv3.New(clientv3.Config{
 			Endpoints:   []string{"etcd.etcd.svc.cluster.local:2379"},
 			DialTimeout: 5 * time.Second,
 			Username:    "root",
-			Password:    "pJs3YaGdp4",
+			Password:    passwd,
 		})
 		if err != nil {
 			fmt.Println(err)
