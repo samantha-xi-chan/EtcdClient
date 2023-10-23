@@ -12,6 +12,8 @@ func main() {
 	cli, err := clientv3.New(clientv3.Config{
 		Endpoints:   []string{"etcd.etcd.svc.cluster.local:2379"},
 		DialTimeout: 5 * time.Second,
+		Username:    "root",
+		Password:    "iUIrnu7gkl",
 	})
 	if err != nil {
 		fmt.Println(err)
