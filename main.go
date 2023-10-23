@@ -14,7 +14,7 @@ func main() {
 		log.Println("passwd: ", passwd)
 
 		cli, err := clientv3.New(clientv3.Config{
-			Endpoints:   []string{"etcd.etcd.svc.cluster.local:2379"},
+			Endpoints:   []string{"etcd.public-service.svc.cluster.local:2379"},
 			DialTimeout: 5 * time.Second,
 			Username:    "root",
 			Password:    passwd,
