@@ -13,7 +13,7 @@ func main() {
 		Endpoints:   []string{"etcd.etcd.svc.cluster.local:2379"},
 		DialTimeout: 5 * time.Second,
 		Username:    "root",
-		Password:    "iUIrnu7gkl",
+		Password:    "pJs3YaGdp4",
 	})
 	if err != nil {
 		fmt.Println(err)
